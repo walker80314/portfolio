@@ -1,0 +1,315 @@
+/*===========FONTS==============*/
+  @font-face {
+    font-family: Gotham-Light;
+    src: url(./fonts/Gotham-Light.otf);
+  }
+  @font-face {
+    font-family: GothamMedium;
+    src: url(./fonts/GothamMedium.ttf);
+  }
+  @font-face {
+    font-family: GothamBook;
+    src: url(./fonts/GothamBook.ttf);
+  }
+
+  @font-face {
+    font-family: RoxboroughCF-Light;
+    src: url(./fonts/RoxboroughCF-Light.otf);
+  }
+  @font-face {
+    font-family: RoxboroughCF-Regular;
+    src: url(./fonts/RoxboroughCF-Regular.otf);
+  }
+  @font-face {
+    font-family: RoxboroughCF-Bold;
+    src: url(./fonts/RoxboroughCF-Bold.otf);
+  }
+  @font-face {
+    font-family: RoxboroughCF-LightItalic;
+    src: url(./fonts/RoxboroughCF-LightItalic.otf);
+  }
+  @font-face {
+    font-family: RoxboroughCF-ThinItalic;
+    src: url(./fonts/RoxboroughCF-ThinItalic.otf);
+  }
+
+  @font-face {
+    font-family: LibreBaskerville-Regular;
+    src: url(./fonts/LibreBaskerville-Regular.ttf);
+  }
+/*==============================*/
+
+/*=======TOP LEVEL=======*/
+  *, *:after, *::before {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+  }
+  a {
+    text-decoration: none;
+  }
+  html {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    width: 100%;
+    cursor: url('images/b.png') 5 5, auto; 
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  div {
+    margin: 0px;
+    padding: 0px;
+  }
+  a {
+    text-decoration: none;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+/*=========================*/
+
+#main {
+  background-color: #FBF9F9;
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  min-height: 100%;
+}
+
+/* Sidebar */
+#sidebar {
+  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  width: 125px;
+  height: 100%;
+  background-color: #FFFFFF;
+}
+
+#sidebar a {
+  display: block;
+  padding: 35px 0px 35px 0px;
+  writing-mode: vertical-rl;
+  font-size: 0.9em;
+  text-orientation: sideways;
+  font-family: Gotham-Light;
+  cursor: url('images/pink_cursor.png'), auto; 
+}
+.sidebar-selected {
+  text-decoration: line-through;
+}
+
+/* Content */
+#content {
+  margin-right: 125px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+/* Name */
+#name {
+  height: 170px;
+  padding-top: 40px;
+  font-size: 0.9em;
+  font-family: GothamBook;
+}
+
+/* Intro */
+.intro {
+  position: relative;
+  line-height: 1.6em;
+  font-family: RoxboroughCF-Light;
+  font-size: 2.4em;
+}
+
+#intro-nickname {
+  font-family: GothamMedium;
+  position: absolute;
+  top: 17px;
+}
+
+#intro-amika {
+  display: inline-block;
+  position: relative;
+  width: 190px;
+  height: 36px;
+}
+#intro-amika-logo {
+  background-image: url(images/amika.svg);
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#intro-amika-underline {
+  width: 100%;
+  height: 100%;
+  background-image: url(images/underline.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  background-size: 200% auto;
+}
+
+#intro-ct {
+  display: inline-block;
+  position: relative;
+  width: 445px;
+  height: 36px;
+  margin-left: 5px;
+}
+#intro-ct-logo {
+  background-image: url(images/ct_logo.svg);
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center center;
+  bottom: 1px;
+}
+#intro-ct-underline {
+  width: 100%;
+  height: 100%;
+  background-image: url(images/underline.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  background-size: 110% auto;
+}
+
+#intro-period {
+  margin-right: 50px
+}
+
+#intro-bold {
+  font-family: RoxboroughCF-Bold;
+}
+
+#intro-two {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#more-info {
+  margin-top: 20px;
+  font-family: RoxboroughCF-Bold;
+  font-size: 3.5em;
+}
+
+#get-in-touch {
+  display: inline-block;
+
+  position: relative;
+  top: -5px;
+  
+  height: 60px;
+  width: 250px;
+
+  background: transparent;
+  color: #000000;
+  
+  font-family: GothamBook;
+  font-size: 0.35em;
+
+  border: solid #000000 2px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 67px;
+}
+
+#get-in-touch:hover {
+  color: #FFFFFF;
+  background-color: #0000FF;
+  border: solid #0000FF 2px;
+  text-decoration: none;
+}
+
+.subheader {
+  margin-top: 75px;
+  margin-bottom: 30px;
+  text-decoration: underline;
+  font-size: 1.2em;
+  font-family: GothamBook;
+}
+
+/* Education */
+.edu-univ {
+  font-size: 1.2em;
+  font-family: GothamBook;
+}
+
+.edu-date {
+  color: #666666;
+  font-size: 1.05em;
+  font-family: RoxboroughCF-ThinItalic;
+}
+
+/* Language */
+.language-title {
+  font-size: 1.2em;
+  font-family: GothamBook;
+  margin-bottom: 15px;
+}
+.language-fluent {
+  position: relative;
+  left: 300px;
+  color: #666666;
+  font-family: RoxboroughCF-ThinItalic;
+}
+.date-from {
+  position: relative;
+  color: #666666;
+  font-family: RoxboroughCF-ThinItalic;
+}
+.date-to {
+  position: relative;
+  left: 410px;
+  color: #666666;
+  font-family: RoxboroughCF-ThinItalic;
+}
+.language-bar {
+  width: 500px;
+  height: 18px;
+}
+
+/* Skill Set */
+.skill-set {
+  font-size: 1.2em;
+  font-family: GothamBook;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {  
+  padding-top: 80px;
+  padding-bottom: 35px;
+  font-size: 0.8em;
+  font-family: GothamBook;
+}
