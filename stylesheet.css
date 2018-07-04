@@ -45,15 +45,12 @@
       -moz-box-sizing: border-box;
       box-sizing: border-box;
   }
-  a {
-    text-decoration: none;
-  }
   html {
     margin: 0;
     padding: 0;
     min-height: 100%;
     width: 100%;
-    cursor: url('images/b.png') 5 5, auto; 
+    cursor: url('images/blue_cursor.png') 5 5, auto; 
   }
   body {
     margin: 0;
@@ -61,21 +58,14 @@
     height: 100%;
     width: 100%;
   }
-  p {
-    margin: 0;
-    padding: 0;
-  }
-  div {
-    margin: 0px;
-    padding: 0px;
-  }
-  a {
-    text-decoration: none;
-  }
-  h1, h2, h3, h4, h5, h6 {
+  p, div, h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
     font-weight: normal;
+  }
+  a {
+    text-decoration: none;
+    cursor: inherit;
   }
 /*=========================*/
 
@@ -108,12 +98,12 @@
 
 #sidebar a {
   display: block;
-  padding: 35px 0px 35px 0px;
+  margin: 35px 0px 35px 0px;
   writing-mode: vertical-rl;
   font-size: 0.9em;
   text-orientation: sideways;
   font-family: Gotham-Light;
-  cursor: url('images/pink_cursor.png'), auto; 
+  cursor: url('images/pink_cursor.png') 5 5, auto; 
 }
 .sidebar-selected {
   text-decoration: line-through;
@@ -204,6 +194,10 @@
   background-size: 110% auto;
 }
 
+.default-cursor {
+  cursor: inherit;
+}
+
 #intro-period {
   margin-right: 50px
 }
@@ -242,6 +236,8 @@
   text-decoration: none;
   text-align: center;
   line-height: 67px;
+
+  cursor: url('images/pink_cursor.png') 5 5, auto; 
 }
 
 #get-in-touch:hover {
