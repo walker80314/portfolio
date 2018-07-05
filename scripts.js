@@ -1,5 +1,6 @@
 $(document).ready(function () {
   setupListeners()
+  console.log("1")
 });
 
 function setupListeners() {
@@ -16,14 +17,14 @@ function setupListeners() {
   );
 
   //
-  $('#intro-ct a').hover(
+  $('#intro-ct-a').hover(
     function() {
-      $('#intro-ct a').stop(true, true);
-      $('#intro-ct a').animate({bottom: '5px'}, 150, 'easeInCubic');
+      $('#intro-ct-a').stop(true, true);
+      $('#intro-ct-a').animate({bottom: '5px'}, 150, 'easeInCubic');
     }, 
     function() {
-      $('#intro-ct a').stop(true, true);
-      $('#intro-ct a').animate({bottom: '0px'}, 150, 'easeInCubic');
+      $('#intro-ct-a').stop(true, true);
+      $('#intro-ct-a').animate({bottom: '0px'}, 150, 'easeInCubic');
     }
   );
 
