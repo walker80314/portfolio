@@ -128,9 +128,9 @@
 /* Intro */
 .intro {
   position: relative;
-  line-height: 1.6em;
+  line-height: 1.8em;
   font-family: RoxboroughCF-Light;
-  font-size: 2.4em;
+  font-size: 3.5em;
 }
 
 #intro-nickname {
@@ -144,8 +144,9 @@
 #intro-amika {
   display: inline-block;
   position: relative;
-  width: 190px;
-  height: 36px;
+  width: 200px;
+  height: 40px;
+  cursor: url('images/pink_cursor.png') 5 5, auto;
 }
 #intro-amika-logo {
   background-image: url(images/amika.svg);
@@ -171,10 +172,11 @@
 #intro-ct {
   display: inline-block;
   position: relative;
-  width: 445px;
-  height: 36px;
+  width: 500px;
+  height: 40px;
   margin-left: 5px;
   margin-right: 70px;
+  cursor: url('images/pink_cursor.png') 5 5, auto;
 }
 #intro-ct-a {
   width: 100%;
@@ -209,7 +211,8 @@
 
 #intro-period {
   position: absolute;
-  right: -15px;
+  right: -20px;
+  top: -30px;
 }
 
 #intro-bold {
