@@ -70,67 +70,170 @@
 /*=========================*/
 
 #main {
-  background-color: #FBF9F9;
+  position: relative;
+  display: flex;
   width: 100%;
   height: 100%;
   max-width: 1920px;
   min-height: 100%;
+  background-color: #FBF9F9;
 }
 
-/* Sidebar */
-#sidebar {
-  display: -webkit-flexbox;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: fixed;
-  right: 0;
-  width: 125px;
-  height: 100%;
-  background-color: #FFFFFF;
-}
-
-#sidebar a {
-  display: block;
-  margin: 35px 0px 35px 0px;
-  writing-mode: vertical-rl;
-  font-size: 0.9em;
-  text-orientation: sideways;
-  font-family: Gotham-Light;
-  cursor: url('images/pink_cursor.png') 5 5, auto;
-  color: #000000 
-}
-.sidebar-selected {
+/* Navigation Bar */
+.navbar-selected {
   text-decoration: line-through;
+}
+@media screen and (max-width: 850px) {
+  #sidebar {
+    display: none;
+  }
+  #bottombar {
+    position: fixed;
+    padding-top: 40px;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: #FFFFFF;
+  }
+  #bottombar a {
+    margin-left: 3%;
+    margin-right: 3%;
+    font-size: 0.9em;
+    font-family: Gotham-Light;
+    cursor: url('images/pink_cursor.png') 5 5, auto;
+    color: #000000;
+  }
+}
+@media screen and (min-width: 850px) {
+  #bottombar {
+    display: none;
+  }
+  #sidebar {
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    width: 125px;
+    height: 100%;
+    background-color: #FFFFFF;
+  }
+  #sidebar a {
+    display: block;
+    margin: 35px 0px 35px 0px;
+    writing-mode: vertical-rl;
+    font-size: 0.9em;
+    text-orientation: sideways;
+    font-family: Gotham-Light;
+    cursor: url('images/pink_cursor.png') 5 5, auto;
+    color: #000000 
+  }
 }
 
 /* Content */
-#content {
-  margin-right: 125px;
-  padding-left: 10%;
-  padding-right: 10%;
+#content { 
+  position: relative;
 }
+@media screen and (max-width: 850px) {
+  #content {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+@media screen and (min-width: 850px) {
+  #content {
+    margin-right: 125px;
+    margin-left: 5px;
+    padding-right: 10%;
+  }
+}
+
 
 /* Name */
 #name {
-  height: 170px;
-  padding-top: 40px;
-  font-size: 0.9em;
   font-family: GothamBook;
 }
+@media screen and (max-width: 850px) {
+  #name {
+    margin-top: 75px;
+    font-size: 1em;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 850px) {
+  #name {
+    height: 170px;
+    padding-top: 40px;
+    font-size: 0.9em;
+  }
+}
+
+
+/* Arrow */
+@media screen and (max-width: 850px) {
+  #arrow-svg {
+    display: none;
+  }
+}
+@media screen and (min-width: 850px) {
+  #arrow-svg {
+    position: relative;
+    top: 35px;
+    flex: 0 0 100px;
+    height: 200px;
+    margin-left: 2%;
+  }
+  .top {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 10;
+    animation: mid-svg 0.5s linear;
+  }
+  .middle {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 10;
+    animation: mid-svg 0.5s linear;
+  }
+  .bottom {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 10;
+    animation: mid-svg 0.5s linear;
+  }
+  @keyframes mid-svg {
+    from {
+      stroke-dashoffset: -400;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
 
 /* Intro */
 .intro {
   position: relative;
-  line-height: 1.8em;
   font-family: RoxboroughCF-Light;
-  font-size: 3.5em;
+}
+@media screen and (max-width: 850px) {
+  .intro {
+    line-height: 1.8em;
+    font-size: 3.1em;
+  }
+}
+@media screen and (min-width: 850px) {
+  .intro {
+    line-height: 1.8em;
+    font-size: 3.5em;
+  }
 }
 
 #intro-nickname {
@@ -205,6 +308,7 @@
   background-size: 110% auto;
 }
 
+
 .default-cursor {
   cursor: inherit;
 }
@@ -219,38 +323,104 @@
   font-family: RoxboroughCF-Bold;
 }
 
+
 #intro-two {
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-#more-info {
-  margin-top: 20px;
-  font-family: RoxboroughCF-Bold;
-  font-size: 3.5em;
+
+/* Insta famous */
+#insta-famous {
+  display: inline-block;
+  position: relative;
+}
+#underline-svg {
+  position: absolute;
+}
+#instagram-handle {
+  display: inline-block;
+  position: absolute;
+  right: 13px;
+  font-family: GothamBook;
+  font-size: 0.28em;
+  cursor: url('images/pink_cursor.png') 5 5, auto;
+  color: #000000;
+}
+#instagram-handle a {
+  color: #000000;
 }
 
-#get-in-touch {
-  display: inline-block;
+@media screen and (max-width: 850px) {
+  #underline-svg {
+    width: 285px;
+    top: 65px;
+  }
+  #instagram-handle {
+    top: 60px;
+  }
+}
+@media screen and (min-width: 850px) {
+  #underline-svg {
+    width: 333px;
+    top: 73px;
+  }
+  #instagram-handle {
+    top: 66px;
+  }
+}
+.underline-svg-path {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 0;
+}
+.underline-svg-path-animation {
+  animation: underline-svg-keyframe 1s linear;
+}
+@keyframes underline-svg-keyframe {
+  from {
+    stroke-dashoffset: 800;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 
+
+#get-in-touch {
   position: relative;
   top: -5px;
-  
   height: 60px;
   width: 250px;
-
   background: transparent;
   color: #000000;
-  
   font-family: GothamBook;
   font-size: 0.35em;
-
   border: solid #000000 2px;
   text-decoration: none;
   text-align: center;
-  line-height: 67px;
-
   cursor: url('images/pink_cursor.png') 5 5, auto; 
+}
+@media screen and (max-width: 850px) {
+  #get-in-touch {
+    display: block;
+    height: 100px;
+    width: 98%;
+    font-size: 0.35em;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 105px;
+  }
+}
+@media screen and (min-width: 850px) {
+  #get-in-touch {
+    display: inline-block;
+    top: -5px;
+    height: 60px;
+    width: 250px;
+    font-size: 0.35em;
+    line-height: 67px;
+  }
 }
 
 #get-in-touch:hover {
@@ -258,6 +428,12 @@
   background-color: #0000FF;
   border: solid #0000FF 2px;
   text-decoration: none;
+}
+
+#more-info {
+  margin-top: 20px;
+  font-family: RoxboroughCF-Bold;
+  font-size: 3.5em;
 }
 
 .subheader {
@@ -281,6 +457,12 @@
 }
 
 /* Language */
+#english-language {
+  width: 500px;
+}
+#chinese-language {
+  width: 500px;
+}
 .language-title {
   font-size: 1.2em;
   font-family: GothamBook;
@@ -288,7 +470,7 @@
 }
 .language-fluent {
   position: relative;
-  left: 300px;
+  right: -60%;
   color: #666666;
   font-family: RoxboroughCF-ThinItalic;
 }
@@ -299,13 +481,12 @@
 }
 .date-to {
   position: relative;
-  left: 410px;
+  right: -410px;
   color: #666666;
   font-family: RoxboroughCF-ThinItalic;
 }
 .language-bar {
-  width: 500px;
-  height: 18px;
+  width: 100%;
 }
 
 /* Skill Set */
