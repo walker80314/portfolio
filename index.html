@@ -34,14 +34,22 @@
 
 <body>
   <div id="main">
-    <div id="sidebar">
-      <a id="sidebar-about" class="sidebar-selected">&nbsp;&nbsp;about&nbsp;&nbsp;</a>
-      <a id="sidebar-work" href="https://www.behance.net/walker80314" target="_blank">&nbsp;&nbsp;work&nbsp;&nbsp;</a>
-      <a id="sidebar-illus" href="https://www.instagram.com/blacklittledust/" target="_blank">&nbsp;&nbsp;illustrations&nbsp;&nbsp;</a>
-    </div>
+    <svg 
+      version="1.1" id="arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      viewBox="0 0 127.2 269.3" xml:space="preserve">
+      <path 
+        class="top" fill-opacity="0" stroke="#000000" stroke-width="6" stroke-miterlimit="10" stroke-linecap="round"
+        d="M124.4,255.3c-6.2-6.4-11.3-13.5-15.2-21.5"/>
+      <path 
+        class="middle" fill-opacity="0" stroke="#000000" stroke-width="6" stroke-miterlimit="10" stroke-linecap="round" 
+        d="M121.3,253.5c-48.6-4.1-91.6-37.4-107.1-83.8c-15.4-46.4-1.6-98.5,34.6-131.2C69,20.2,95.1,9.3,122.2,7.1"/>
+      <path 
+        class="bottom" fill-opacity="0" stroke="#000000" stroke-width="6" stroke-miterlimit="10" stroke-linecap="round" 
+        d="M124.2,254.3c-7.7,4.5-15.8,7.7-24.5,9.7"/>
+    </svg>
+
     <div id="content">
       <h1 id="name">Tiffany Hsiao</h1>
-
       <p class="intro">
         Tiffany – formally known as <span id="intro-nickname">T</span> – is a visual designer, based in NYC, with a deep interest in the philosophy of design thinking and open design system. She employs multidisciplinary approach to design, ranging from 
         <span id="intro-bold">graphic design, UI/UX, illustration, packaging and motion design.</span>
@@ -65,7 +73,20 @@
 
       <p id="intro-two" class="intro">
         When not designing, she likes exploring the city, watching movies, trying to be
-        <span>insta famous,</span> and eating Asian food.
+        <span id="insta-famous">
+          insta famous,
+          <svg id="underline-svg"
+            version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 388.3 35"xml:space="preserve">
+            <path class="underline-svg-path" style="visibility: hidden"
+              fill-opacity="0" stroke="#000000" stroke-width="6" stroke-miterlimit="10" stroke-linecap="round"
+              d="M4.5,28.1 C102.4,14.5,201.2,4.6,300.2,6.7c27.7,0.6,55.5,2.1,83.1,4.6,c3,0,0,1.5,0,1
+              c-48.5,3.5-97,6-145.6,7.5c-1.6,0-1.6,2.5,0,2.5c30.2,0.4,60.5,0.8,90.7,1.3"/>
+          </svg>
+          <span id="instagram-handle" style="opacity: 0;">
+            <a href="https://www.instagram.com/blacklittledust/" target="_blank">@blacklittledust</a>
+          </span>
+        </span> and eating Asian food.
       </p>
 
       <h2 id="more-info">More info :</h2>
@@ -79,21 +100,25 @@
       <p class="edu-date">August 2014 - December 2016</p>
       
       <h3 class="subheader">Language:</h3>
-      <div class="language-wrapper">
-        <span class="language-title">English</span> <span class="language-fluent">fluent</span>
-      </div>
-      <img class="language-bar" src="images/english_bar.svg">
-      <div>
-        <span class="date-from">1991</span> <span class="date-to">since</span>
+      <div id="english-language">
+        <div class="language-wrapper">
+          <span class="language-title">English</span> <span class="language-fluent">fluent</span>
+        </div>
+        <img class="language-bar" src="images/english_bar.gif">
+        <div>
+          <span class="date-from">1991</span> <span class="date-to">since</span>
+        </div>
       </div>
       <br>
       <br>
-      <div>
-        <span class="language-title">Chinese</span> <span class="language-fluent">fluent</span>
-      </div>
-      <img class="language-bar" src="images/chinese_bar.svg">
-      <div>
-        <span class="date-from">1991</span> <span class="date-to">since</span>
+      <div id="chinese-language">
+        <div>
+          <span class="language-title">Chinese</span> <span class="language-fluent">fluent</span>
+        </div>
+        <img class="language-bar" src="images/chinese_bar.gif">
+        <div>
+          <span class="date-from">1991</span> <span class="date-to">since</span>
+        </div>
       </div>
 
       <h3 class="subheader">Skill Sets:</h3>
@@ -107,7 +132,19 @@
       <footer>© 2018</footer>
     </div>
 
+    <div id="sidebar" class="navigation-bar">
+      <a class="navbar-about navbar-selected">&nbsp;&nbsp;about&nbsp;&nbsp;</a>
+      <a class="navbar-work" href="https://www.behance.net/walker80314" target="_blank">&nbsp;&nbsp;work&nbsp;&nbsp;</a>
+      <a class="navbar-illus" href="https://www.instagram.com/blacklittledust/" target="_blank">&nbsp;&nbsp;illustrations&nbsp;&nbsp;</a>
+    </div>
+
+    <div id="bottombar" class="navigation-bar">
+      <a class="navbar-about navbar-selected">&nbsp;&nbsp;about&nbsp;&nbsp;</a>
+      <a class="navbar-work" href="https://www.behance.net/walker80314" target="_blank">&nbsp;&nbsp;work&nbsp;&nbsp;</a>
+      <a class="navbar-illus" href="https://www.instagram.com/blacklittledust/" target="_blank">&nbsp;&nbsp;illustrations&nbsp;&nbsp;</a>
+    </div>
   </div>
+
 </body>
 
 </html>
